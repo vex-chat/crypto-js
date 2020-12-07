@@ -1,0 +1,16 @@
+src
+keys
+.github
+.vscode
+node_modules
+.gitignore
+*.db
+yarn.lock
+*.tgz
+.env
+tsconfig.json
+tslint.json
+scripts
+docs
+typedoc.json
+*.log
