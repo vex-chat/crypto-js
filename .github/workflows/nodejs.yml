@@ -27,6 +27,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         registry-url: "https://npm.pkg.github.com"
         scope: "@vex-chat"
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Setup Cache
       uses: actions/cache@v1
@@ -36,8 +38,6 @@ jobs:
 
     - name: Install Dependencies
       run: yarn --network-concurrency 1
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Package
       run: npm pack      
